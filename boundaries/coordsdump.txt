@@ -1,0 +1,9 @@
+print(geomFuture)
+<QgsGeometry: PointZ (891051.95487650390714407 6245905.67971252929419279 100)>
+itrf.setCoordinateEpoch(2100)
+tr = QgsCoordinateTransform(itrf, QgsCoordinateReferenceSystem("EPSG:7855"), QgsProject.instance())
+geomFuture = QgsGeometry(QgsPoint(151.22590831, -33.85475712, 100))
+geomFuture.transform(tr)
+<GeometryOperationResult.Success: 0>
+print(geomFuture)
+<QgsGeometry: PointZ (891050.22339092008769512 6245901.12779625039547682 100)>
